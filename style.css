@@ -1,0 +1,184 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+header .logo {
+  height: 50px;
+  margin-top: 10px;
+}
+
+nav {
+  width: 100%;
+  background-color: #333;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+nav ul li {
+  position: relative;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #4CAF50;
+}
+
+nav ul .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li:hover .submenu {
+  display: block;
+}
+
+nav ul .submenu li {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.dark-mode main article {
+  background-color: black;
+  
+}
+
+.dark-mode header {
+  background-color: #222;
+}
+
+.dark-mode nav ul {
+  background-color: #222;
+}
+
+.dark-mode nav ul li a {
+  color: #f4f4f4;
+}
+
+.dark-mode nav ul li a:hover {
+  background-color: #555;
+}
+
+.dark-mode footer {
+  background-color: #222;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  main {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  main {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    text-align: left;
+    padding: 10px;
+  }
+
+  header .logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  main {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    text-align: center;
+  }
+
+  nav ul {
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  main {
+    padding: 5px;
+  }
+}
